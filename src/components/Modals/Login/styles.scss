@@ -1,0 +1,146 @@
+.modal-dialog {
+  max-width: 950px;
+}
+
+.modal-content {
+  border-radius: 20px !important;
+  box-shadow: rgb(0 0 0 / 15%) 2.4px 2.4px 3.2px;
+}
+
+.close {
+  width: 50px !important;
+  position: absolute !important;
+  right: 0 !important;
+  font-size: 36px;
+  z-index: 1;
+  background: transparent;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.modal-left-col {
+  border-radius: 20px 0 0 20px;
+  padding: 0px 60px;
+}
+
+.modal-left-col {
+  background: #7ad058;
+  text-align: center;
+  color: #fff;
+  padding: 30px 60px;
+}
+.sniser img {
+  margin: 20px 0;
+}
+.sniser img {
+  width: 150px;
+  margin-bottom: 50px;
+}
+.modal-right-col {
+  border-radius: 20px 20px 20px 20px;
+  padding: 21px 70px 0px 50px !important;
+}
+
+.modal-right-col {
+  background: #fff;
+  text-align: center;
+  padding: 20px 60px 0px 60px;
+}
+
+.sniser-logo img {
+  width: 75px !important;
+  margin-bottom: 5px !important;
+}
+
+.sniser-logo img {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+.slider-item-1 {
+  background-image: url(../../../assets/login-img1.png);
+}
+
+.sniser-slider-item {
+  img {
+    width: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+  p {
+    color: #fff;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.slick-dots li {
+  button {
+    &::before {
+      color: #dfe1e4;
+      font-size: 12px;
+    }
+  }
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffffff;
+}
+
+p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #6b6b84;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 10px !important;
+}
+
+.login-form .form-group .form-control {
+  height: 40px !important;
+  border-radius: 10px;
+}
+.login-form input {
+  padding: 0 130px !important;
+}
+
+.login-form .form-group .login-btn {
+  width: 100%;
+  border-radius: 10px;
+  background: #6fda44;
+  color: #fff !important;
+  border: 1px solid #6fda44;
+  height: 45px;
+}
+
+.login-form .form-group a {
+  font-weight: 600;
+  color: #6fda44 !important;
+  font-size: 18px !important;
+}
+
+.forget {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  transition: 0.5s;
+  text-decoration: none;
+}

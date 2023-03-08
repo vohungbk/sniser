@@ -1,0 +1,225 @@
+.home-slides {
+  display: block;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  .owl-height {
+    height: 400px;
+    .slider-item {
+      background-size: cover;
+      background-position: center center;
+      min-height: 400px;
+    }
+    .slider-item-1 {
+      background-image: url(../../../assets/hero1.jpeg);
+    }
+
+    .slider-item-2 {
+      background-image: url(../../../assets/hero2.jpeg);
+    }
+
+    .slider-item-3 {
+      background-image: url(../../../assets/hero3.jpeg);
+    }
+    .page-hero-section {
+      text-align: center;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h2 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 50px;
+        text-shadow: 0 0 9px #000;
+      }
+    }
+  }
+}
+
+.accordion {
+  background-color: #6fda44;
+  color: #2a3539;
+  cursor: pointer;
+  padding: 25px 50px;
+  width: 100%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 38px;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  line-height: 90px;
+  &::after {
+    font-family: "Material Icons";
+    content: "expand_more";
+    float: right;
+    font-size: 55px;
+  }
+}
+
+.accordion-inverse {
+  background-color: #2a3539;
+  color: #6fda44;
+}
+
+.active.accordion {
+  &::after {
+    font-family: "Material Icons";
+    content: "expand_less";
+  }
+}
+
+.panel {
+  background-color: white;
+  overflow: hidden;
+  .container {
+    padding: 75px 20px;
+    margin-top: -4px;
+  }
+}
+
+img.steps-number-image {
+  max-width: 60px;
+  margin-bottom: 25px;
+}
+
+p.steps-text {
+  color: #2a3539;
+  font-size: 24px;
+  line-height: 1.15em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table.table-monetise {
+  border: 3px solid #6fda44;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  th,
+  td {
+    border: 3px solid #6fda44;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  th {
+    font-size: 23px;
+    font-weight: 700;
+  }
+  tr th:first-child {
+    width: 25%;
+  }
+}
+
+.chat-now-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #6fda44;
+  padding-left: 25px;
+  padding-right: 25px;
+  p {
+    font-size: 36px;
+    color: #2a3539;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.8;
+  }
+  .btn_div {
+    width: 100%;
+    text-align: center;
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+    .chat-btn {
+      background: #2a3539;
+      border-radius: 25px;
+      padding: 10px 25px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      &:hover {
+        transform: scale(1.1) perspective(1px);
+      }
+    }
+  }
+}
+
+table.table-monetise.table-mob {
+  display: none;
+}
+
+@media only screen and (max-width: 679px) {
+  .page-hero-section h2 {
+    font-size: 25px !important;
+  }
+  .accordion {
+    font-size: 24px;
+    line-height: 45px;
+    padding: 20px 25px;
+    &:after {
+      font-size: 40px;
+    }
+  }
+  .how-sniser-works .row {
+    margin-bottom: 60px;
+  }
+  .reverse-mob {
+    flex-direction: column-reverse;
+  }
+  .panel .container {
+    background: #f8f8f8;
+    padding: 35px 20px;
+  }
+  .benefits .panel .container {
+    padding: 35px 10px;
+  }
+  table.table-monetise {
+    display: none;
+  }
+  table.table-monetise.table-mob {
+    display: table;
+    margin-bottom: 25px;
+  }
+  table.table-monetise.table-mob thead th {
+    font-size: 20px;
+  }
+  table.table-monetise.table-mob tr th {
+    width: 20%;
+  }
+  table.table-monetise.table-mob th {
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  .chat-now-section p {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+  .btn_div {
+    display: flex;
+    column-gap: 3px;
+    justify-content: space-between;
+  }
+  a.chat-btn {
+    font-size: 18px !important;
+    padding: 8px 15px !important;
+  }
+}
