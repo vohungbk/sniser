@@ -1,0 +1,265 @@
+.page-banner-area {
+  background-image: url("../../../assets/artist-service.jpeg");
+  padding: 130px 100px;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: bottom center;
+  h2 {
+    color: #fff;
+    font-weight: 400 !important;
+    position: relative;
+    font-size: 2rem !important;
+    &::before {
+      position: absolute;
+      font-family: FontAwesome;
+      color: #6fda44;
+      top: 0;
+      content: "\f10d";
+      font-size: 16px;
+      margin-left: -22px;
+    }
+    &::after {
+      position: absolute;
+      font-family: FontAwesome;
+      color: #6fda44;
+      bottom: 3px;
+      font-size: 16px;
+      content: "\f10e";
+      padding-left: 10px;
+    }
+  }
+}
+.page-banner-area h2 .lfts {
+  color: #6fda44;
+  font-size: 28px;
+}
+.page-banner-area h2 i {
+  display: none;
+}
+
+.price-sect {
+}
+.contact-title.prce h2 {
+  margin-bottom: 8px;
+}
+
+.contact-title h2 {
+  margin-bottom: 30px;
+  font-weight: 400 !important;
+  position: relative;
+  font-size: 2rem !important;
+}
+.contact-title h2:before {
+  position: absolute;
+  font-family: FontAwesome;
+  color: #6fda44;
+  top: 0;
+  content: "\f10d";
+  font-size: 16px;
+  margin-left: -22px;
+}
+.contact-title h2 i {
+  color: #6fda44;
+  font-size: 28px;
+  display: none;
+}
+.contact-title h2 span {
+  font-weight: bold;
+}
+.contact-title h2:after {
+  position: absolute;
+  font-family: FontAwesome;
+  color: #6fda44;
+  bottom: 0;
+  font-size: 16px;
+  content: "\f10e";
+  padding-left: 6px;
+}
+.contact-title.prce p {
+  margin-bottom: 20px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  color: #6b6b84;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.price-holder {
+  background: #2a3539;
+  padding: 60px 25px;
+  border-radius: 8px;
+  height: 680px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+  background-image: url(../../../assets/service-back.png);
+  background-repeat: no-repeat;
+}
+.price-holder h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+.price-holder ul {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+ul {
+  padding-left: 0;
+}
+.price-holder ul li {
+  position: relative;
+  padding: 0 0 20px 30px;
+  font-size: 16px;
+}
+.price-holder ul li {
+  color: #fff;
+}
+.price-holder ul li:before {
+  position: absolute;
+  content: "\f00c";
+  left: 0;
+  top: 0;
+  font-family: "FontAwesome";
+  color: #fff;
+  background-color: #80cd36;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 22px;
+}
+.started-btn {
+  position: absolute;
+  bottom: 30px;
+  display: block;
+}
+
+.started-btn {
+  padding: 15px 60px;
+  background-color: #6fda44;
+  color: #ffffff;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  text-align: center;
+  width: 85%;
+}
+.started-btn:hover {
+  color: #ffffff;
+}
+.started-btn:hover {
+  color: #ffffff;
+}
+.started-btn {
+  position: absolute;
+  bottom: 30px;
+  display: block;
+}
+.investor-wrapper {
+  background: #f9f9f9;
+  padding: 100px 300px;
+  text-align: center;
+}
+.signin-btn {
+  border: 1px solid #2a3539;
+  border-radius: 50px;
+  font-size: 14px;
+  padding: 17px 80px;
+  margin-top: 20px;
+  display: inline-block;
+  font-weight: 600;
+  color: #2a3539;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.signin-btn::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #6fda44;
+  z-index: -1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 50px;
+}
+.signin-btn:hover {
+  color: #ffffff;
+  border-color: #6fda44;
+}
+.signin-btn:hover::before {
+  height: 100%;
+}
+@media only screen and (min-width: 1200px) and (max-width: 2500px) {
+  .container {
+    max-width: 1250px;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  .page-banner-area h2 {
+    font-size: 30px !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page-banner-area {
+    padding: 90px 20px;
+  }
+  .page-banner-area h2 {
+    font-size: 24px;
+  }
+  .contact-title h2 {
+    font-size: 24px !important;
+    margin-bottom: 10px;
+  }
+  .price-holder {
+    height: auto;
+  }
+  .investor-wrapper {
+    padding: 60px 15px;
+  }
+  .contact-title h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .signin-btn {
+    padding: 10px 60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .page-banner-area {
+    padding: 90px 20px;
+    background-image: url(../../../assets/sniser-banner-new.jpeg) !important;
+    background-position: left !important;
+    height: auto !important;
+  }
+}

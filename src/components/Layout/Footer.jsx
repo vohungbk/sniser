@@ -1,5 +1,11 @@
 import "./Layout.scss"
 
+import Twiter from "../../assets/twitter.svg"
+import Facebook from "../../assets/facebook.svg"
+import Linkedin from "../../assets/linkedin.svg"
+import Instagram from "../../assets/instagram.svg"
+import { Link } from "react-router-dom"
+
 const Footer = () => {
   return (
     <footer className="footer-area pt-100 pb-50">
@@ -22,20 +28,11 @@ const Footer = () => {
               <ul className="social mt-20">
                 <li>
                   <a
-                    href="https://www.facebook.com/snisertrading"
+                    href="https://www.facebook.com/Sniserman/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <i className="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/Sniser4"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fa fa-twitter"></i>
+                    <img src={Facebook} style={{ width: "42px" }} alt="" />
                   </a>
                 </li>
                 <li>
@@ -44,17 +41,25 @@ const Footer = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {" "}
-                    <i className="fa fa-linkedin"></i>
+                    <img src={Linkedin} style={{ width: "42px" }} alt="" />
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/sniser15/"
+                    href="https://twitter.com/Sniser4"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <i className="fa fa-instagram"></i>
+                    <img src={Twiter} style={{ width: "42px" }} alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/sniser_nfts/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={Instagram} style={{ width: "42px" }} alt="" />
                   </a>
                 </li>
               </ul>
@@ -86,13 +91,13 @@ const Footer = () => {
                   <a href="https://sniser.com/our-algorithm/">How it works</a>
                 </li>
                 <li>
-                  <a href="https://sniser.com/artist-service/">Artist service</a>
+                  <Link to="/artist-service">Artist service</Link>
                 </li>
                 <li>
-                  <a href="https://sniser.com/faq/">FAQs</a>
+                  <Link to="/faq">FAQs</Link>
                 </li>
                 <li>
-                  <a href="https://sniser.com/about-us/">About Us</a>
+                  <Link to="/about-us">About Us</Link>
                 </li>
                 <li>
                   <a href="https://sniser.com/contact-us/">Contact Us</a>

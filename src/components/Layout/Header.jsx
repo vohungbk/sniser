@@ -44,7 +44,7 @@ const Header = () => {
                   </a>
                 </li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a href="https://sniser.com/faq/" className="nav-link ">
                     FAQ
                   </a>
@@ -60,7 +60,7 @@ const Header = () => {
                   <a href="https://sniser.com/contact-us/" className="nav-link ">
                     Contact Us
                   </a>
-                </li>
+                </li> */}
 
                 <li className="header-btn login-btn">
                   <button
@@ -71,7 +71,9 @@ const Header = () => {
                   </button>
                 </li>
                 <li className="header-btn login-btn">
-                  <button className="nav-link h-btn">Signup</button>
+                  <button className="nav-link h-btn connect-btn">
+                    CONNECT WALLET
+                  </button>
                 </li>
               </ul>
             </div>
@@ -124,29 +126,13 @@ const Header = () => {
                     </a>
                   </li>
 
-                  <li className="nav-item faq-class">
-                    <a href="https://sniser.com/faq/" className="nav-link ">
-                      FAQ
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a href="https://sniser.com/about-us/" className="nav-link ">
-                      About Us
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <a href="https://sniser.com/contact-us/" className="nav-link ">
-                      Contact Us
-                    </a>
-                  </li>
-
                   <li className="header-btn login-btn header-btn-mobile">
                     <button className="nav-link h-btn h-btn-mobile">Login</button>
                   </li>
                   <li className="header-btn login-btn header-btn-mobile">
-                    <button className="nav-link h-btn h-btn-mobile">Sign up</button>
+                    <button className="nav-link h-btn h-btn-mobile">
+                      Connect Wallet
+                    </button>
                   </li>
                 </ul>
               </nav>

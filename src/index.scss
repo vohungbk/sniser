@@ -157,3 +157,32 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold !important;
 }
+
+.pb-60 {
+  padding-top: 60px;
+}
+
+.ptb-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.pt-70 {
+  padding-top: 70px;
+}
+
+.pl-3,
+.px-3 {
+  padding-left: 1rem !important;
+}
+.pr-3,
+.px-3 {
+  padding-right: 1rem !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .ptb-60 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,215 @@
+.page-banner-about-area {
+  background-image: url(../../../assets/about-us.png);
+  padding: 130px 100px;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: bottom center;
+}
+
+.page-banner-about-area h2 {
+  color: #fff;
+  font-weight: 400 !important;
+  position: relative;
+  font-size: 2rem !important;
+}
+.page-banner-about-area h2:before {
+  position: absolute;
+  font-family: FontAwesome;
+  color: #6fda44;
+  top: 0;
+  content: "\f10d";
+  font-size: 16px;
+  margin-left: -22px;
+}
+
+.page-banner-about-area h2 span {
+  font-weight: 700;
+}
+
+.page-banner-about-area h2:after {
+  position: absolute;
+  font-family: FontAwesome;
+  color: #6fda44;
+  bottom: 3px;
+  font-size: 16px;
+  content: "\f10e";
+  padding-left: 10px;
+}
+
+.page-banner-about-area h2 .lfts {
+  color: #6fda44;
+  font-size: 28px;
+}
+.page-banner-about-area h2 i {
+  display: none;
+}
+
+.teacher-registration-wrapper {
+  padding: 60px 0;
+}
+
+.teacher-registration-wrapper .bt-tabs ul.nav-tabs {
+  border-bottom: none;
+  width: 395px;
+  margin: 0 auto;
+  background-color: #2e5c6c;
+  padding: 5px 5px;
+  border-radius: 88px;
+  margin-bottom: 20px;
+}
+
+.teacher-registration-wrapper .bt-tabs ul.nav-tabs .active {
+  border: 0 none;
+  background: #fff;
+  color: #2a3539;
+}
+.teacher-registration-wrapper .bt-tabs ul.nav-tabs li a {
+  text-transform: capitalize;
+  color: #fff;
+  margin-right: -1px;
+  font-weight: 600;
+  padding: 18px 60px;
+  font-size: 14px;
+  border-radius: 30px;
+  display: block;
+}
+
+.teacher-registration-wrapper .bt-tabs .tab-content .tab-pane {
+  padding-top: 20px;
+}
+
+.tab-content > .active {
+  display: block;
+  opacity: 1;
+}
+
+.ptb-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.sinser-box h2 {
+  font-weight: 400 !important;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  position: relative;
+}
+.sinser-box h2:before {
+  position: absolute;
+  font-family: FontAwesome;
+  color: #6fda44;
+  left: -22px;
+  top: 0;
+  content: "\f10d";
+  font-size: 16px;
+}
+
+.sinser-box h2 span {
+  font-weight: 700;
+}
+
+.sinser-box h2 i {
+  color: #6fda44;
+  font-size: 20px;
+}
+
+.sinser-box h2 i {
+  display: none;
+}
+
+.sinser-box h2:after {
+  position: absolute;
+  font-family: FontAwesome;
+  color: #6fda44;
+  bottom: 0;
+  font-size: 16px;
+  content: "\f10e";
+  margin-left: 6px;
+}
+
+.sinser-box p {
+  margin-top: 40px;
+}
+
+.layer_image {
+  position: relative;
+  float: right;
+  margin-right: -45px;
+}
+
+.tab-content .sniser-image {
+  position: unset;
+}
+.tab-content .sniser-image img {
+  height: 350px;
+  object-fit: contain;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  display: table;
+}
+
+.tab-content .sniser-image img {
+  min-height: 450px;
+  width: 100%;
+  display: block;
+}
+
+@media only screen and (max-width: 1180px) {
+  .page-banner-about-area h2 {
+    font-size: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tab-content .sniser-image img {
+    min-height: unset;
+    width: 80%;
+    display: block;
+    margin-bottom: 30px;
+  }
+  .page-banner-about-area {
+    padding: 90px 20px;
+    background-image: url(../../../assets/sniser-banner-new.jpeg) !important;
+    background-position: left !important;
+    height: auto !important;
+  }
+  .teacher-registration-wrapper {
+    padding: 30px 0;
+  }
+  .ptb-50 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .sniser-offers .row {
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  .sinser-box h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    padding-left: 20px;
+  }
+
+  .sinser-box p {
+    margin-top: 20px;
+  }
+  .layer_image {
+    display: none;
+  }
+  .sniser-offers .row.reversed-order {
+    flex-direction: column;
+  }
+  .sniser-offers .row {
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+  }
+  .tab-content .sniser-image img {
+    min-height: unset;
+    width: 80%;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
