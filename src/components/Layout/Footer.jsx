@@ -85,10 +85,10 @@ const Footer = () => {
               <h3>Site Links</h3>
               <ul className="quick-links">
                 <li>
-                  <a href="https://sniser.com/">Homepage</a>
+                  <a href="/">Homepage</a>
                 </li>
                 <li>
-                  <a href="https://sniser.com/our-algorithm/">How it works</a>
+                  <Link to={"/whitepaper"}>How it works</Link>
                 </li>
                 <li>
                   <Link to="/artist-service">Artist service</Link>
@@ -100,14 +100,14 @@ const Footer = () => {
                   <Link to="/about-us">About Us</Link>
                 </li>
                 <li>
-                  <Link to="/contact-us">Contact Us</Link>
+                  <Link to="/finance">Contact Us</Link>
                 </li>
                 <li>
-                  <a href="https://sniser.com/sign-up/">Nft Shop Signup</a>
+                  <Link to="/">Business Service</Link>
                 </li>
-                <li>
+                {/* <li>
                   <a href="#">Sitemap</a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

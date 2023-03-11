@@ -62,9 +62,7 @@ const SubmissionForm = () => {
             </div>
             <div className="form-row row">
               <div className="form-group">
-                <label htmlFor="name">
-                  LINK TO CONTENT (PRIVATE) LINK TO CONTENT (PRIVATE)
-                </label>
+                <label htmlFor="name">LINK TO CONTENT (PRIVATE)</label>
                 <label className="hint">
                   Please ensure that it is set to private as public content cannot be
                   displayed on our platform
@@ -77,17 +75,18 @@ const SubmissionForm = () => {
               </div>
             </div>
             <div className="form-row row">
-              <div className="form-group">
+              <div className="">
                 <label htmlFor="name">Art BRIEF (level of funding required)</label>
                 <textarea
-                  cols={4}
                   rows={4}
                   className="form-control"
                   id="name"
+                  style={{ height: "auto" }}
                   placeholder="Enter the Art Brief here, please make sure you are also including the level of funding"
                 />
               </div>
             </div>
+
             <div className="row justify-content-center">
               <button type="button" className="btn-submit">
                 Submit
