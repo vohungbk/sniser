@@ -100,7 +100,7 @@ const Footer = () => {
                   <Link to="/about-us">About Us</Link>
                 </li>
                 <li>
-                  <a href="https://sniser.com/contact-us/">Contact Us</a>
+                  <Link to="/contact-us">Contact Us</Link>
                 </li>
                 <li>
                   <a href="https://sniser.com/sign-up/">Nft Shop Signup</a>

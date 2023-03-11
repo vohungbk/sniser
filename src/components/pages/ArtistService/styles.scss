@@ -1,5 +1,4 @@
 .page-banner-area {
-  background-image: url("../../../assets/artist-service.jpeg");
   padding: 130px 100px;
   text-align: center;
   background-size: cover;
@@ -30,6 +29,9 @@
       padding-left: 10px;
     }
   }
+}
+.page-banner-area.page-banner-artist-area {
+  background-image: url("../../../assets/artist-service.jpeg");
 }
 .page-banner-area h2 .lfts {
   color: #6fda44;
@@ -258,8 +260,12 @@ ul {
 @media only screen and (max-width: 767px) {
   .page-banner-area {
     padding: 90px 20px;
-    background-image: url(../../../assets/sniser-banner-new.jpeg) !important;
     background-position: left !important;
     height: auto !important;
+  }
+  .page-banner-area.page-banner-artist-area {
+    background: url(../../../assets/artist-service.jpeg) no-repeat center center
+      fixed !important;
+    background-size: cover !important;
   }
 }

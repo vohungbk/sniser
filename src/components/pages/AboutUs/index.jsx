@@ -6,27 +6,27 @@ import Working from "../../../assets/working-with-the-best-talent.png"
 const AboutUs = () => {
   return (
     <>
-      <div class="page-banner-about-area">
+      <div className="page-banner-about-area">
         <h2>
-          <i class="fa fa-quote-left lfts pr-3"></i>A professional team that provides
+          <i className="fa fa-quote-left lfts pr-3"></i>A professional team that provides
           expert
           <br /> knowledge and
           <span>
             &nbsp;customer service in equal <br />
             measure
           </span>
-          <i class="fa fa-quote-right lfts pl-3"></i>
+          <i className="fa fa-quote-right lfts pl-3"></i>
         </h2>
       </div>
-      <section class="teacher-registration-wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-sm-12  bt-tabs">
+      <section className="teacher-registration-wrapper">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 col-sm-12  bt-tabs">
               <div role="tabpanel">
-                <ul class="nav nav-tabs" role="tablist" style={{ width: "206px" }}>
+                <ul className="nav nav-tabs" role="tablist" style={{ width: "206px" }}>
                   <li role="presentation">
                     <a
-                      class="active"
+                      className="active"
                       href="#home"
                       aria-controls="home"
                       role="tab"
@@ -38,22 +38,22 @@ const AboutUs = () => {
                   </li>
                 </ul>
 
-                <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane fade active in" id="home">
-                    <div class="sniser-offers ptb-50">
-                      <div class="container">
+                <div className="tab-content">
+                  <div role="tabpanel" className="tab-pane fade active in" id="home">
+                    <div className="sniser-offers ptb-50">
+                      <div className="container">
                         <div
-                          class="row"
+                          className="row"
                           style={{ justifyContent: "center", alignItems: "center" }}
                         >
-                          <div class="col-md-6">
-                            <div class="sinser-box">
+                          <div className="col-md-6">
+                            <div className="sinser-box">
                               <h2>
                                 <span>
-                                  <i class="fa fa-quote-left lfts pr-3"></i>
+                                  <i className="fa fa-quote-left lfts pr-3"></i>
                                   Empowering the creative content industry
                                 </span>
-                                <i class="fa fa-quote-right pl-3"></i>
+                                <i className="fa fa-quote-right pl-3"></i>
                               </h2>
 
                               <p>
@@ -80,19 +80,19 @@ const AboutUs = () => {
                             </div>
                           </div>
 
-                          <div class="col-md-6">
-                            {/* <div class="layer_image">
+                          <div className="col-md-6">
+                            {/* <div className="layer_image">
                               <img
                                 src={CreativeContentIndustry}
-                                class="img-responsive"
+                                className="img-responsive"
                                 alt=""
                               />
                             </div> */}
 
-                            <div class="sniser-image">
+                            <div className="sniser-image">
                               <img
                                 src={CreativeContentIndustry}
-                                class="img-responsive"
+                                className="img-responsive"
                                 alt=""
                                 title=""
                               />
@@ -102,51 +102,51 @@ const AboutUs = () => {
                       </div>
                     </div>
 
-                    <div class="sniser-offers ptb-50">
-                      <div class="container">
-                        <div class="row reversed-order">
+                    <div className="sniser-offers ptb-50">
+                      <div className="container">
+                        <div className="row reversed-order">
                           <div
-                            class="col-md-6"
+                            className="col-md-6"
                             style={{
                               display: "flex",
                               justifyContent: "center !important",
                               alignitems: "center !important",
                             }}
                           >
-                            {/* <div class="layer_image lft">
+                            {/* <div className="layer_image lft">
                               <img
                                 src="http://alltoit.org/development/sniser/images/layer2.jpg"
-                                class="img-responsive"
+                                className="img-responsive"
                                 alt=""
                               />
                             </div> */}
 
-                            <div class="sniser-image visible-lg">
+                            <div className="sniser-image visible-lg">
                               <img
                                 src={UsingWeb}
-                                class="img-responsive"
+                                className="img-responsive"
                                 alt=""
                                 title=""
                               />
                             </div>
                           </div>
 
-                          <div class="col-md-6">
-                            <div class="sinser-box">
-                              {/* <div class="sniser-image mobile visible-sm">
+                          <div className="col-md-6">
+                            <div className="sinser-box">
+                              {/* <div className="sniser-image mobile visible-sm">
                                 <img
                                   src="/uploads/about_us/Sniser - Using web 3.0.png"
-                                  class="img-responsive"
+                                  className="img-responsive"
                                   alt=""
                                 />
                               </div> */}
 
                               <h2>
                                 <span>
-                                  <i class="fa fa-quote-left lfts pr-3"></i>Using web
+                                  <i className="fa fa-quote-left lfts pr-3"></i>Using web
                                   3.0 to support artists, consumers, and investors
                                 </span>
-                                <i class="fa fa-quote-right pl-3"></i>
+                                <i className="fa fa-quote-right pl-3"></i>
                               </h2>
 
                               <p>
@@ -176,17 +176,17 @@ const AboutUs = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="sniser-offers ptb-50">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="sinser-box">
+                    <div className="sniser-offers ptb-50">
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-md-6">
+                            <div className="sinser-box">
                               <h2>
                                 <span>
-                                  <i class="fa fa-quote-left lfts pr-3"></i>Working
+                                  <i className="fa fa-quote-left lfts pr-3"></i>Working
                                   with the best talent
                                 </span>
-                                <i class="fa fa-quote-right pl-3"></i>
+                                <i className="fa fa-quote-right pl-3"></i>
                               </h2>
 
                               <p>
@@ -213,25 +213,25 @@ const AboutUs = () => {
                           </div>
 
                           <div
-                            class="col-md-6"
+                            className="col-md-6"
                             style={{
                               display: "flex",
                               justifyContent: "center",
                               alignItems: "center",
                             }}
                           >
-                            {/* <div class="layer_image">
+                            {/* <div className="layer_image">
                               <img
                                 src="http://alltoit.org/development/sniser/images/LAYER1.jpg"
-                                class="img-responsive"
+                                className="img-responsive"
                                 alt=""
                               />
                             </div> */}
 
-                            <div class="sniser-image">
+                            <div className="sniser-image">
                               <img
                                 src={Working}
-                                class="img-responsive"
+                                className="img-responsive"
                                 alt=""
                                 title=""
                               />
@@ -242,27 +242,27 @@ const AboutUs = () => {
                     </div>
                   </div>
 
-                  <div role="tabpanel" class="tab-pane fade" id="tab2">
-                    <section class="leaders">
-                      <div class="container">
-                        <div class="row leader-block mt-3">
-                          <div class="col-md-12">
-                            <div class="team-lderss">
-                              <div class="row">
-                                <div class="col-md-4">
-                                  <div class="leader-single">
-                                    <figure class="large-image">
+                  <div role="tabpanel" className="tab-pane fade" id="tab2">
+                    <section className="leaders">
+                      <div className="container">
+                        <div className="row leader-block mt-3">
+                          <div className="col-md-12">
+                            <div className="team-lderss">
+                              <div className="row">
+                                <div className="col-md-4">
+                                  <div className="leader-single">
+                                    <figure className="large-image">
                                       <img
                                         src="https://sniser.com/uploads/team/1619809780mascot.PNG"
                                         alt=""
-                                        class="img-responsive"
+                                        className="img-responsive"
                                       />
                                     </figure>
                                   </div>
                                 </div>
-                                <div class="col-md-8">
-                                  <div class="leader-single leader-holder">
-                                    <div class="leader-info">
+                                <div className="col-md-8">
+                                  <div className="leader-single leader-holder">
+                                    <div className="leader-info">
                                       <h2></h2>
                                       <p>
                                         Hi and welcome to Sniser. I'm Sniserman, I
@@ -293,7 +293,7 @@ const AboutUs = () => {
                                         <span></span>
                                       </p>
                                       <h4>
-                                        <a href="" class="kwame-btn"></a>
+                                        <a href="" className="kwame-btn"></a>
                                       </h4>
                                     </div>
                                   </div>
@@ -301,24 +301,24 @@ const AboutUs = () => {
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-4">
-                            <div class="leader-single">
+                          <div className="col-md-4">
+                            <div className="leader-single">
                               <figure>
                                 <img
                                   src="https://sniser.com/uploads/team/1619809780mascot.PNG"
                                   alt=""
-                                  class="img-responsive"
+                                  className="img-responsive"
                                 />
 
                                 <figcaption>
-                                  <ul class="list-unstyled">
+                                  <ul className="list-unstyled">
                                     <li>
                                       <a
                                         href="https://www.facebook.com/"
                                         target="_blank"
                                         rel="noreferrer"
                                       >
-                                        <i class="fa fa-facebook"></i>
+                                        <i className="fa fa-facebook"></i>
                                       </a>
                                     </li>
 
@@ -328,7 +328,7 @@ const AboutUs = () => {
                                         target="_blank"
                                         rel="noreferrer"
                                       >
-                                        <i class="fa fa-twitter"></i>
+                                        <i className="fa fa-twitter"></i>
                                       </a>
                                     </li>
 
@@ -338,7 +338,7 @@ const AboutUs = () => {
                                         target="_blank"
                                         rel="noreferrer"
                                       >
-                                        <i class="fa fa-instagram"></i>
+                                        <i className="fa fa-instagram"></i>
                                       </a>
                                     </li>
 
@@ -348,14 +348,14 @@ const AboutUs = () => {
                                         target="_blank"
                                         rel="noreferrer"
                                       >
-                                        <i class="fa fa-youtube"></i>
+                                        <i className="fa fa-youtube"></i>
                                       </a>
                                     </li>
                                   </ul>
                                 </figcaption>
                               </figure>
 
-                              <div class="leader-info">
+                              <div className="leader-info">
                                 <h4>
                                   <a href=""></a>
                                 </h4>
@@ -367,19 +367,19 @@ const AboutUs = () => {
                         </div>
                       </div>
                     </section>
-                    <div class="team-listing">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="team-members">
-                              <div class="member-box">
+                    <div className="team-listing">
+                      <div className="container">
+                        <div className="row">
+                          <div className="col-md-4">
+                            <div className="team-members">
+                              <div className="member-box">
                                 <img
                                   src="https://sniser.com/uploads/team/1619692459kwame.jpg"
                                   alt=""
-                                  class="img-responsive"
+                                  className="img-responsive"
                                 />
                               </div>
-                              <div class="member-info">
+                              <div className="member-info">
                                 <h4>
                                   <a
                                     href=""
@@ -391,22 +391,22 @@ const AboutUs = () => {
                                 </h4>
                                 CEO{" "}
                               </div>
-                              <div class="modal" id="myModal1">
-                                <div class="modal-dialog">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h4 class="modal-title">Kwame Osei</h4>
+                              <div className="modal" id="myModal1">
+                                <div className="modal-dialog">
+                                  <div className="modal-content">
+                                    <div className="modal-header">
+                                      <h4 className="modal-title">Kwame Osei</h4>
 
                                       <button
                                         type="button"
-                                        class="close"
+                                        className="close"
                                         data-dismiss="modal"
                                       >
                                         ×
                                       </button>
                                     </div>
 
-                                    <div class="modal-body">
+                                    <div className="modal-body">
                                       <p>
                                         Interested in all things technology related,
                                         Nelson has been a fundamental part of taking

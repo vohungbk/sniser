@@ -1,0 +1,177 @@
+.banner-finance {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../../assets/finance-bg.png"), no-repeat, center center/ cover !important;
+  background-size: cover !important;
+  h2 {
+    & span {
+      text-transform: uppercase;
+      margin-bottom: 31px;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      display: none;
+    }
+    p {
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}
+
+.how-it-work {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 72px;
+    &::before {
+      position: absolute;
+      font-family: FontAwesome;
+      color: #6fda44;
+      top: 0;
+      content: "\f10d";
+      font-size: 16px;
+      margin-left: -22px;
+    }
+    &::after {
+      position: absolute;
+      font-family: FontAwesome;
+      color: #6fda44;
+      bottom: 3px;
+      font-size: 16px;
+      content: "\f10e";
+      padding-left: 20px;
+    }
+  }
+  .content {
+    border-radius: 23px;
+    filter: drop-shadow(0px 0px 6.5px rgba(0, 0, 0, 0.25));
+    background: #ffffff;
+    text-align: center;
+    padding: 63px 30px 20px 30px;
+    position: relative;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 400 !important;
+      color: #2a3539;
+      margin-bottom: 42px;
+    }
+    .center-img {
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      font-style: normal;
+      text-align: center;
+      color: #2a3539;
+    }
+    .number {
+      position: absolute;
+      top: -32.5px;
+      left: calc(50% - 32.5px);
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 22px;
+  font-style: normal;
+  color: #2a3539;
+  .question {
+    position: relative;
+    margin-bottom: 60px;
+
+    &:before {
+      position: absolute;
+      font-family: FontAwesome;
+      color: #6fda44;
+      top: -10px;
+      content: "\f10d";
+      font-size: 16px;
+      margin-left: -22px;
+    }
+
+    &:after {
+      position: absolute;
+      font-family: FontAwesome;
+      color: #6fda44;
+      bottom: -10px;
+      font-size: 16px;
+      content: "\f10e";
+      padding-left: 6px;
+    }
+  }
+  .contact-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .icon-contact-extra {
+      margin-bottom: 8px;
+      i {
+        border-radius: 50%;
+      }
+    }
+
+    .info {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      font-style: normal;
+      text-align: center;
+      color: #2a3539;
+      margin-bottom: 30px;
+      max-width: 368px;
+    }
+  }
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  font-style: normal;
+  text-align: center;
+  color: #2a3539;
+  margin-bottom: 16px;
+}
+
+.text-reach {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  font-style: normal;
+  text-align: center;
+  color: #2a3539;
+  margin-bottom: 43px;
+  max-width: 342px;
+}
+
+@media only screen and (max-width: 679px) {
+  .how-it-work .content {
+    margin-bottom: 60px;
+  }
+  .banner-finance {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../assets/finance-bg.png") no-repeat center center fixed !important;
+    background-size: cover !important;
+  }
+  .contact {
+    .question {
+      line-height: 36px;
+    }
+  }
+}

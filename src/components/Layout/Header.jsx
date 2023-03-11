@@ -30,7 +30,7 @@ const Header = () => {
       <div className="main-navbar">
         <div className="container">
           <nav className="navbar navbar-expand-md navbar-light">
-            <a className="navbar-brand" href="https://sniser.com/">
+            <a className="navbar-brand" href="/">
               <img src="https://sniser.com/uploads/logo/1671700553logo.png" alt="" />
             </a>
             <div
@@ -121,7 +121,7 @@ const Header = () => {
               <nav className="mean-nav">
                 <ul className={`navbar-nav ${openMenu ? "d-flex" : "d-none"}`}>
                   <li className="nav-item">
-                    <a href="http://shop.sniser.com/" className="nav-link ">
+                    <a href="/" className="nav-link ">
                       Content
                     </a>
                   </li>
@@ -138,8 +138,8 @@ const Header = () => {
               </nav>
             </div>
 
-            <div class="logo">
-              <a href="https://sniser.com/">
+            <div className="logo">
+              <a href="/">
                 <img src={LogoMobile} alt="" />
               </a>
             </div>

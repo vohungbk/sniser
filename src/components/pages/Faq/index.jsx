@@ -13,11 +13,10 @@ const Faq = () => {
   const [showHeading9, setShowHeading9] = useState(false)
   const [showHeading10, setShowHeading10] = useState(false)
   const [showHeading11, setShowHeading11] = useState(false)
-  const [showHeading12, setShowHeading12] = useState(false)
 
   return (
     <>
-      <div className="page-banner-area">
+      <div className="page-banner-area banner-fap">
         <h2>
           <i className="fa fa-quote-left lfts pr-3"></i>
           <span>Are nfts like crypto currencies?</span> What are the returns of

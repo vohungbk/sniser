@@ -173,7 +173,7 @@
   .page-banner-about-area {
     padding: 90px 20px;
     background-image: url(../../../assets/sniser-banner-new.jpeg) !important;
-    background-position: left !important;
+    // background-position: left !important;
     height: auto !important;
   }
   .teacher-registration-wrapper {
@@ -211,5 +211,9 @@
     width: 80%;
     display: block;
     margin-bottom: 30px;
+  }
+  .page-banner-about-area {
+    background: url(../../../assets/about-us.png) no-repeat center center fixed !important;
+    background-size: cover !important;
   }
 }

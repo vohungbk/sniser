@@ -1,0 +1,74 @@
+.banner-whitepaper {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../../assets/whitepaper-bg.png"), no-repeat, center center/ cover !important;
+  background-size: cover !important;
+  h2 {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold !important;
+  line-height: 22px;
+  font-style: normal;
+  text-align: center;
+  color: #2a3539;
+  margin-bottom: 20px;
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  font-style: normal;
+  text-align: center;
+  color: #2a3539;
+  margin-bottom: 26px;
+}
+.btn-download {
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 17px;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  background: #2a3539;
+  padding: 13px 36px;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.bull-content {
+  background: #f6f6f6;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.white-content {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+@media only screen and (max-width: 679px) {
+  .banner-whitepaper {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../assets/whitepaper-bg.png") no-repeat center center fixed !important;
+    background-size: cover !important;
+  }
+  .white-content {
+    padding: 0;
+  }
+
+  .m-t-20 {
+    margin-top: 20px;
+  }
+  .bull-content {
+    padding: 0;
+  }
+}

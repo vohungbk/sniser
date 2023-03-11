@@ -1,0 +1,111 @@
+.submission {
+  filter: drop-shadow(0px 0px 6.5px rgba(0, 0, 0, 0.25));
+  background: #52c124;
+  background: linear-gradient(180deg, #52c124 0%, #6fda44 100%);
+  padding-top: 77px;
+  padding-bottom: 70px;
+  .content {
+    max-width: 687px;
+    margin: 0 auto;
+    h2 {
+      font-size: 32px;
+      font-weight: bold !important;
+      line-height: 22px;
+      font-style: normal;
+      text-align: left;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      font-style: normal;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 45px;
+    }
+    .form-row {
+      margin-bottom: 27px;
+      .form-group {
+        margin-bottom: 0 !important;
+      }
+      label {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 11px;
+        font-style: normal;
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 12px;
+      }
+      input,
+      textarea {
+        border-color: #ffffff;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 7px;
+        background: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+        font-style: normal;
+        text-align: left;
+        color: #aaaaaa;
+        padding: 10px 19px;
+      }
+      .hint {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 11px;
+        font-style: normal;
+        text-align: left;
+        color: #ffffff;
+      }
+      select {
+        appearance: none;
+        background-image: url("../../assets/arrow-down.png");
+        background-repeat: no-repeat;
+        background-position: right 0.7rem top 50%;
+        background-size: 0.65rem auto;
+      }
+    }
+    .btn-submit {
+      border-radius: 10px;
+      background: #2a3539;
+      text-transform: uppercase;
+      text-align: center;
+      padding-top: 17px;
+      padding-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 21px;
+      font-style: normal;
+      color: #ffffff;
+      width: 97%;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 679px) {
+  .submission {
+    .content {
+      .form-row {
+        .mb-27 {
+          margin-bottom: 27px !important;
+        }
+        label {
+          line-height: 24px;
+        }
+      }
+      .btn-submit {
+        width: 95%;
+      }
+    }
+  }
+}

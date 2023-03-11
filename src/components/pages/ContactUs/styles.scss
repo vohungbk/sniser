@@ -1,0 +1,47 @@
+.page-banner-contact-area {
+  background-image: url(../../../assets/contact-us.png);
+}
+
+.contact-holder {
+  margin-top: 12px;
+}
+
+.icon-contact {
+  float: left;
+  width: 9%;
+}
+
+.icon-contact i {
+  background-color: #6fda44;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+
+.contact-information {
+  margin-left: 60px;
+}
+
+.contact-information p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.responsive-iframe {
+  width: 600px;
+  height: 350px;
+}
+
+@media only screen and (max-width: 767px) {
+  .responsive-iframe {
+    width: 100%;
+  }
+  .page-banner-contact-area {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../../assets/contact-us.png") no-repeat center center fixed !important;
+    background-size: cover !important;
+  }
+}
