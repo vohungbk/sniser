@@ -10,6 +10,7 @@ import ContactUs from "./components/pages/ContactUs"
 import Private from "./components/pages/Private"
 import Finance from "./components/pages/Finance"
 import Whitepaper from "./components/pages/Whitepaper"
+import ForgotPassword from "./components/pages/ForgotPassword"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/private-file/mr-1" element={<Private />} />
         <Route path="/finance" element={<Finance />} />
         <Route path="/whitepaper" element={<Whitepaper />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
       </Routes>
       <Footer />
       <CopyRight />

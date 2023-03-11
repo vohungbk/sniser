@@ -3,11 +3,13 @@ import "./Layout.scss"
 import NavDescription from "./NavDescription"
 import LogoMobile from "../../assets/logo-mobile.png"
 import LoginModal from "../Modals/Login"
+import SignUpModal from "../Modals/Signup"
 
 const Header = () => {
   const [fixed, setFixed] = useState(false)
   const [openMenu, setOpenMenu] = useState(false)
   const [showModalLogin, setShowModalLogin] = useState(false)
+  const [showModalSignUp, setShowSignUp] = useState(false)
 
   useEffect(() => {
     const onScroll = async (event) => {
@@ -127,7 +129,12 @@ const Header = () => {
                   </li>
 
                   <li className="header-btn login-btn header-btn-mobile">
-                    <button className="nav-link h-btn h-btn-mobile">Login</button>
+                    <button
+                      className="nav-link h-btn h-btn-mobile"
+                      onClick={() => setShowModalLogin(true)}
+                    >
+                      Login
+                    </button>
                   </li>
                   <li className="header-btn login-btn header-btn-mobile">
                     <button className="nav-link h-btn h-btn-mobile">
@@ -151,6 +158,14 @@ const Header = () => {
         <LoginModal
           open={showModalLogin}
           close={() => setShowModalLogin(!showModalLogin)}
+          openModalSignUp={() => setShowSignUp(true)}
+        />
+      )}
+      {!!showModalSignUp && (
+        <SignUpModal
+          open={showModalSignUp}
+          close={() => setShowSignUp(!showModalSignUp)}
+          openModalLogin={() => setShowModalLogin(true)}
         />
       )}
     </header>
