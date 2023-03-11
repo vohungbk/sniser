@@ -3,13 +3,20 @@ import CreativeContentIndustry from "../../../assets/creative_content_industry.p
 import UsingWeb from "../../../assets/using_web.png"
 import Working from "../../../assets/working-with-the-best-talent.png"
 
+import AboutUsBanner from "../../../assets/about-us.png"
+
 const AboutUs = () => {
   return (
     <>
-      <div className="page-banner-about-area">
+      <div
+        className="page-banner-about-area"
+        style={{
+          backgroundImage: `url(${AboutUsBanner})`,
+        }}
+      >
         <h2>
-          <i className="fa fa-quote-left lfts pr-3"></i>A professional team that provides
-          expert
+          <i className="fa fa-quote-left lfts pr-3"></i>A professional team that
+          provides expert
           <br /> knowledge and
           <span>
             &nbsp;customer service in equal <br />
@@ -23,7 +30,11 @@ const AboutUs = () => {
           <div className="row">
             <div className="col-md-12 col-sm-12  bt-tabs">
               <div role="tabpanel">
-                <ul className="nav nav-tabs" role="tablist" style={{ width: "206px" }}>
+                <ul
+                  className="nav nav-tabs"
+                  role="tablist"
+                  style={{ width: "206px" }}
+                >
                   <li role="presentation">
                     <a
                       className="active"
@@ -143,8 +154,9 @@ const AboutUs = () => {
 
                               <h2>
                                 <span>
-                                  <i className="fa fa-quote-left lfts pr-3"></i>Using web
-                                  3.0 to support artists, consumers, and investors
+                                  <i className="fa fa-quote-left lfts pr-3"></i>Using
+                                  web 3.0 to support artists, consumers, and
+                                  investors
                                 </span>
                                 <i className="fa fa-quote-right pl-3"></i>
                               </h2>
@@ -183,8 +195,8 @@ const AboutUs = () => {
                             <div className="sinser-box">
                               <h2>
                                 <span>
-                                  <i className="fa fa-quote-left lfts pr-3"></i>Working
-                                  with the best talent
+                                  <i className="fa fa-quote-left lfts pr-3"></i>
+                                  Working with the best talent
                                 </span>
                                 <i className="fa fa-quote-right pl-3"></i>
                               </h2>

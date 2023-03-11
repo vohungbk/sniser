@@ -3,6 +3,8 @@
     url("../../../assets/whitepaper-bg.png"), no-repeat, center center/ cover !important;
   background-size: cover !important;
   h2 {
+    font-size: 32px;
+    font-weight: 400 !important;
     &::before,
     &::after {
       display: none;

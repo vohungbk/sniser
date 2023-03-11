@@ -3,6 +3,8 @@
     url("../../../assets/finance-bg.png"), no-repeat, center center/ cover !important;
   background-size: cover !important;
   h2 {
+    font-weight: 400 !important;
+    font-size: 32px;
     & span {
       text-transform: uppercase;
       margin-bottom: 31px;

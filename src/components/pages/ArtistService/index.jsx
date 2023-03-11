@@ -1,9 +1,16 @@
 import "./styles.scss"
 
+import service from "../../../assets/artist-service.jpeg"
+
 const ArtistService = () => {
   return (
     <>
-      <div className="page-banner-area page-banner-artist-area">
+      <div
+        className="page-banner-artist-area"
+        style={{
+          backgroundImage: `url(${service})`,
+        }}
+      >
         <h2>
           <i className="fa fa-quote-left lfts pr-3"></i>Upload your content to our
           catalogue. Choose a subscription package that suits your requirements.

@@ -1,4 +1,4 @@
-.page-banner-area {
+.page-banner-artist-area {
   padding: 130px 100px;
   text-align: center;
   background-size: cover;
@@ -30,19 +30,15 @@
     }
   }
 }
-.page-banner-area.page-banner-artist-area {
-  background-image: url("../../../assets/artist-service.jpeg");
-}
-.page-banner-area h2 .lfts {
+
+.page-banner-artist-area h2 .lfts {
   color: #6fda44;
   font-size: 28px;
 }
-.page-banner-area h2 i {
+.page-banner-artist-area h2 i {
   display: none;
 }
 
-.price-sect {
-}
 .contact-title.prce h2 {
   margin-bottom: 8px;
 }
@@ -223,7 +219,7 @@ ul {
   }
 }
 @media only screen and (max-width: 1180px) {
-  .page-banner-area h2 {
+  .page-banner-artist-area h2 {
     font-size: 30px !important;
   }
 }
@@ -233,10 +229,10 @@ ul {
   }
 }
 @media only screen and (max-width: 767px) {
-  .page-banner-area {
+  .page-banner-artist-area {
     padding: 90px 20px;
   }
-  .page-banner-area h2 {
+  .page-banner-artist-area h2 {
     font-size: 24px;
   }
   .contact-title h2 {
@@ -258,14 +254,8 @@ ul {
   }
 }
 @media only screen and (max-width: 767px) {
-  .page-banner-area {
+  .page-banner-artist-area {
     padding: 90px 20px;
-    background-position: left !important;
     height: auto !important;
-  }
-  .page-banner-area.page-banner-artist-area {
-    background: url(../../../assets/artist-service.jpeg) no-repeat center center
-      fixed !important;
-    background-size: cover !important;
   }
 }

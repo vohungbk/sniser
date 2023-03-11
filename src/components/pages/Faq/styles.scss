@@ -10,8 +10,12 @@
 
 .page-banner-area h2 {
   color: #fff;
-  font-weight: 400;
   position: relative;
+}
+
+.banner-fap h2 {
+  font-weight: 400 !important;
+  font-size: 32px;
 }
 
 .page-banner-area h2:before {
@@ -114,6 +118,11 @@ a:focus {
 
 .faq-wrapper .faq-tabs .panel-group .panel .panel-collapse .panel-body i {
   color: #6ed743;
+}
+
+.fa-quote-right::before,
+.fa-quote-left::before {
+  display: none;
 }
 
 @media only screen and (max-width: 1180px) {
