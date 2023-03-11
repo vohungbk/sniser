@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import "./Layout.scss"
 import NavDescription from "./NavDescription"
-import LogoMobile from "../../assets/logo-mobile.png"
+import LogoMobile from "../../assets/logo.png"
 import LoginModal from "../Modals/Login"
 import SignUpModal from "../Modals/Signup"
 
@@ -32,7 +32,7 @@ const Header = () => {
       <div className="main-navbar">
         <div className="container">
           <nav className="navbar navbar-expand-md navbar-light">
-            <a className="navbar-brand" href="/">
+            <a className="navbar-brand" href="https://sniser-home.netlify.app/">
               <img src="https://sniser.com/uploads/logo/1671700553logo.png" alt="" />
             </a>
             <div
@@ -145,9 +145,13 @@ const Header = () => {
               </nav>
             </div>
 
-            <div className="logo">
-              <a href="/">
-                <img src={LogoMobile} alt="" />
+            <div className="logo" style={{ zIndex: 1000, width: "92%" }}>
+              <a href="https://sniser-home.netlify.app/">
+                <img
+                  style={{ width: "150px", height: "46px", zIndex: 100 }}
+                  src={LogoMobile}
+                  alt=""
+                />
               </a>
             </div>
           </div>

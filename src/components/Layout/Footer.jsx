@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="col-lg-4 col-sm-6">
             <div className="single-footer-widget">
               <div className="footer-logo">
-                <a href="https://sniser.com/">
+                <a href="https://sniser-home.netlify.app/">
                   <img src="https://sniser.com/images/Sniser.svg" alt="" />
                 </a>
               </div>
@@ -85,7 +85,7 @@ const Footer = () => {
               <h3>Site Links</h3>
               <ul className="quick-links">
                 <li>
-                  <a href="/">Homepage</a>
+                  <a href="https://sniser-home.netlify.app/">Homepage</a>
                 </li>
                 <li>
                   <Link to={"/whitepaper"}>How it works</Link>
