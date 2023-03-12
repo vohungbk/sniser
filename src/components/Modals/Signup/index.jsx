@@ -32,7 +32,7 @@ const SignUpModal = ({ open, close, openModalLogin }) => {
       </button>
       <Modal.Body>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-lg-6 col-12">
             <div className="modal-left-col">
               <div className="sniser">
                 <img src="https://sniser.com/images/sniser-text.png" alt="" />
@@ -62,7 +62,7 @@ const SignUpModal = ({ open, close, openModalLogin }) => {
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6 col-12">
             <div class="modal-right-col">
               <div class="sniser-logo">
                 <img src="https://sniser.com/images/sniser-logo.png" alt="" />

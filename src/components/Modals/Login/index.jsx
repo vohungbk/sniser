@@ -16,7 +16,7 @@ const LoginModal = ({ open, close, openModalSignUp }) => {
     arrows: false,
   }
   return (
-    <Modal show={open} onHide={close} centered>
+    <Modal show={open} onHide={close}>
       <button
         type="button"
         class="close"
@@ -34,7 +34,7 @@ const LoginModal = ({ open, close, openModalSignUp }) => {
       </button>
       <Modal.Body>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-lg-6 col-12">
             <div className="modal-left-col">
               <div className="sniser">
                 <img src="https://sniser.com/images/sniser-text.png" alt="" />
@@ -64,7 +64,7 @@ const LoginModal = ({ open, close, openModalSignUp }) => {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-lg-6 col-12">
             <div className="modal-right-col">
               <div className="sniser-logo">
                 <img src="https://sniser.com/images/sniser-logo.png" alt="" />

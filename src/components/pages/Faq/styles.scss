@@ -8,6 +8,10 @@
   background-position: bottom center;
 }
 
+.banner-fap {
+  height: 400px;
+}
+
 .page-banner-area h2 {
   color: #fff;
   position: relative;
@@ -143,7 +147,7 @@ a:focus {
   .page-banner-area {
     background-image: url(../../../assets/sniser-banner-new.jpeg) !important;
     background-position: left !important;
-    height: auto !important;
+    // height: auto !important;
   }
   section.faq-wrapper.pt-70 {
     margin-top: 20px;

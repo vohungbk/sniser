@@ -52,6 +52,7 @@
 .sniser-logo img {
   width: 75px !important;
   margin-bottom: 5px !important;
+  display: inline-block;
 }
 
 .sniser-logo img {
@@ -182,10 +183,10 @@ a {
     width: 200px;
     text-align: left;
   }
-}
-
-@media only screen and (max-width: 767px) {
   .login-form {
     padding: 25px 20px;
   }
+}
+
+@media only screen and (max-width: 767px) {
 }

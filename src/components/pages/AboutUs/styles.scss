@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   position: relative;
   background-position: bottom center;
+  height: 400px;
 }
 
 .page-banner-about-area h2 {
@@ -171,7 +172,7 @@
   }
   .page-banner-about-area {
     padding: 90px 20px;
-    height: auto !important;
+    // height: auto !important;
   }
   .teacher-registration-wrapper {
     padding: 30px 0;

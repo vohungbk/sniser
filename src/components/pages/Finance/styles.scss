@@ -2,6 +2,8 @@
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("../../../assets/finance-bg.png"), no-repeat, center center/ cover !important;
   background-size: cover !important;
+  height: 400px;
+  padding: 115px 100px;
   h2 {
     font-weight: 400 !important;
     font-size: 32px;
@@ -162,14 +164,25 @@
   max-width: 342px;
 }
 
+@media only screen and (max-width: 992px) {
+  .center-img {
+    min-height: 171px;
+  }
+  .how-it-work .content {
+    height: 100%;
+  }
+}
+
 @media only screen and (max-width: 679px) {
   .how-it-work .content {
     margin-bottom: 60px;
+    height: auto;
   }
   .banner-finance {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
       url("../../../assets/finance-bg.png") no-repeat center center fixed !important;
     background-size: cover !important;
+    padding: 30px 20px;
   }
   .contact {
     .question {

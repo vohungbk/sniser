@@ -93,7 +93,9 @@ const Finance = () => {
                   <i className="fa fa-map-marker"></i>
                 </div>
                 <div className="">
-                  <p className="info">SNISER LTD 3rd Floor, 86-90 Paul Street, London, EC2A 4NE</p>
+                  <p className="info">
+                    SNISER LTD 3rd Floor, 86-90 Paul Street, London, EC2A 4NE
+                  </p>
                 </div>
               </div>
             </div>
