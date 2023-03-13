@@ -69,12 +69,12 @@ const Header = () => {
                     className="nav-link h-btn"
                     onClick={() => setShowModalLogin(true)}
                   >
-                    Login
+                    Upload Content
                   </button>
                 </li>
                 <li className="header-btn login-btn">
                   <button className="nav-link h-btn connect-btn">
-                    CONNECT WALLET
+                    Purchase NFT
                   </button>
                 </li>
               </ul>
@@ -133,12 +133,12 @@ const Header = () => {
                       className="nav-link h-btn h-btn-mobile"
                       onClick={() => setShowModalLogin(true)}
                     >
-                      Login
+                      Upload Content
                     </button>
                   </li>
                   <li className="header-btn login-btn header-btn-mobile">
                     <button className="nav-link h-btn h-btn-mobile">
-                      Connect Wallet
+                      Purchase NFT
                     </button>
                   </li>
                 </ul>

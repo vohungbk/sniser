@@ -1,6 +1,8 @@
 import { useState } from "react"
 import "./styles.scss"
 
+import FapBanner from "../../../assets/faqs.jpeg"
+
 const Faq = () => {
   const [showHeading1, setShowHeading1] = useState(false)
   const [showHeading2, setShowHeading2] = useState(false)
@@ -16,7 +18,12 @@ const Faq = () => {
 
   return (
     <>
-      <div className="page-banner-area banner-fap">
+      <div
+        className="page-banner-area banner-fap"
+        style={{
+          backgroundImage: `url(${FapBanner})`,
+        }}
+      >
         <h2>
           <i className="fa fa-quote-left lfts pr-3"></i>
           <span>Are nfts like crypto currencies?</span> What are the returns of

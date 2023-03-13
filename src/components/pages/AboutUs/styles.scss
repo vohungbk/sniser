@@ -157,6 +157,19 @@
   display: block;
 }
 
+.blur {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 130px 100px;
+}
+
 @media only screen and (max-width: 1180px) {
   .page-banner-about-area h2 {
     font-size: 30px !important;
@@ -170,9 +183,9 @@
     display: block;
     margin-bottom: 30px;
   }
-  .page-banner-about-area {
+  .page-banner-about-area,
+  .blur {
     padding: 90px 20px;
-    // height: auto !important;
   }
   .teacher-registration-wrapper {
     padding: 30px 0;

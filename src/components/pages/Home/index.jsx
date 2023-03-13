@@ -416,14 +416,14 @@ const Home = () => {
         <p>Sign up with us</p>
         <div className="btn_div">
           <a
-            href="https://sniser.com/artist-service/"
+            href="https://sniser-shop.netlify.app/artist-service"
             className="chat-btn"
             style={{ marginLeft: "10px", marginRight: "10px" }}
           >
-            Upload content
+            View Rates
           </a>
           <a
-            href="https://sniser.com/shop"
+            href="https://shop.sniser.com/"
             className="chat-btn"
             style={{ marginLeft: "10px", marginRight: "10px" }}
           >

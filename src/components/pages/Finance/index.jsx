@@ -50,8 +50,8 @@ const Finance = () => {
                 </h3>
                 <img src={Layer} alt="" className="center-img" />
                 <p>
-                  One of our creative directors will review your work and where
-                  possible will get in contact with you.
+                  Send us the link to the material that you would like us to review.
+                  It can be either a completed piece or most likely a synopsis.
                 </p>
                 <img className="number" src={number2} alt="" />
               </div>

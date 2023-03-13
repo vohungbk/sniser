@@ -1,15 +1,15 @@
 .page-banner-area {
-  background-image: url("../../../assets/faqs.png");
   padding: 130px 100px;
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  background-position: bottom center;
+  background-position: center center;
 }
 
 .banner-fap {
   height: 400px;
+  background-image: url("../../../assets/faqs.jpeg");
 }
 
 .page-banner-area h2 {
@@ -144,11 +144,7 @@ a:focus {
   .page-banner-area {
     padding: 90px 20px;
   }
-  .page-banner-area {
-    background-image: url(../../../assets/sniser-banner-new.jpeg) !important;
-    background-position: left !important;
-    // height: auto !important;
-  }
+
   section.faq-wrapper.pt-70 {
     margin-top: 20px;
   }
@@ -158,9 +154,5 @@ a:focus {
   .faq-wrapper {
     padding-bottom: 40px;
     padding-top: 40px;
-  }
-  .page-banner-area.banner-fap {
-    background: url(../../../assets/faqs.png) no-repeat center center fixed !important;
-    background-size: cover !important;
   }
 }

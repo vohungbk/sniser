@@ -43,7 +43,7 @@ const SubmissionForm = () => {
             <div className="form-row row">
               <div className="form-group">
                 <label htmlFor="linkOther">
-                  LINKS TO OTHER SOcial media ACCOUNTS
+                  Links to other SOCIAL media accounts
                 </label>
                 <input
                   className="form-control"
@@ -57,6 +57,8 @@ const SubmissionForm = () => {
                 <label htmlFor="linkOther">Content type</label>
                 <select className="form-control">
                   <option>Audio</option>
+                  <option>Video</option>
+                  <option>Book</option>
                 </select>
               </div>
             </div>

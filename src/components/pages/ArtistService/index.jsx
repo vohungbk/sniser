@@ -1,8 +1,13 @@
 import "./styles.scss"
 
 import service from "../../../assets/artist-service.jpeg"
+import SignUpModal from "../../Modals/Signup"
+import { useState } from "react"
+import LoginModal from "../../Modals/Login"
 
 const ArtistService = () => {
+  const [showModalSignUp, setShowSignUp] = useState(false)
+  const [showModalLogin, setShowModalLogin] = useState(false)
   return (
     <>
       <div
@@ -44,10 +49,6 @@ const ArtistService = () => {
                   <li>Limited NFT support</li>
                   <li>$0 per month</li>
                 </ul>
-
-                <a href="https://www.sniser.com/sign-up/" className="started-btn">
-                  Get Started
-                </a>
               </div>
             </div>
 
@@ -64,10 +65,6 @@ const ArtistService = () => {
                   <li>NFT support</li>
                   <li>$200 per month</li>
                 </ul>
-
-                <a href="https://www.sniser.com/sign-up/" className="started-btn">
-                  Get Started
-                </a>
               </div>
             </div>
             <div className="col-md-4">
@@ -80,9 +77,6 @@ const ArtistService = () => {
                   <li>Full NFT support</li>
                   <li>Call for prices</li>
                 </ul>
-                <a href="https://www.sniser.com/sign-up/" className="started-btn">
-                  Get Started
-                </a>{" "}
               </div>
             </div>
           </div>
@@ -96,26 +90,39 @@ const ArtistService = () => {
                 <div className="contact-title text-center">
                   <h2>
                     <i className="fa fa-quote-left lfts pr-3"></i>
-                    <span>Assistance to upload content to our platform</span>{" "}
+                    <span>Start uploading content and minting NFTs.</span>
                     <i className="fa fa-quote-right lfts pl-3"></i>
                   </h2>
                 </div>
 
                 <p>
-                  We can assist you to upload content, assign an NFT and allow your
-                  followers to purchase it. Simply head over to our page on Fiverr
-                  and select the type of content you are after and the speed with
-                  which you require it. We will do the rest for you.
+                  Sniser offers a unique way for you to generate revenue from your
+                  artform. Take advantage of our unique infrastructure to better
+                  protect and monetize your online content.
                 </p>
 
-                <a href="https://www.sniser.com/library/" className="signin-btn">
-                  Assistance with uploading to Sniser platform
+                <a onClick={() => setShowSignUp(true)} className="signin-btn">
+                  Sign up with Register to start uploading your content.
                 </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {!!showModalSignUp && (
+        <SignUpModal
+          open={showModalSignUp}
+          close={() => setShowSignUp(!showModalSignUp)}
+          openModalLogin={() => setShowModalLogin(true)}
+        />
+      )}
+      {!!showModalLogin && (
+        <LoginModal
+          open={showModalLogin}
+          close={() => setShowModalLogin(!showModalLogin)}
+          openModalSignUp={() => setShowSignUp(true)}
+        />
+      )}
     </>
   )
 }

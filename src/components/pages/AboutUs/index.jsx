@@ -3,7 +3,7 @@ import CreativeContentIndustry from "../../../assets/creative_content_industry.p
 import UsingWeb from "../../../assets/using_web.png"
 import Working from "../../../assets/working-with-the-best-talent.png"
 
-import AboutUsBanner from "../../../assets/about-us.png"
+import AboutUsBanner from "../../../assets/about-us.jpeg"
 
 const AboutUs = () => {
   return (
@@ -14,16 +14,18 @@ const AboutUs = () => {
           backgroundImage: `url(${AboutUsBanner})`,
         }}
       >
-        <h2>
-          <i className="fa fa-quote-left lfts pr-3"></i>A professional team that
-          provides expert
-          <br /> knowledge and
-          <span>
-            &nbsp;customer service in equal <br />
-            measure
-          </span>
-          <i className="fa fa-quote-right lfts pl-3"></i>
-        </h2>
+        <div className="blur">
+          <h2>
+            <i className="fa fa-quote-left lfts pr-3"></i>A professional team that
+            provides expert
+            <br /> knowledge and
+            <span>
+              &nbsp;customer service in equal <br />
+              measure
+            </span>
+            <i className="fa fa-quote-right lfts pl-3"></i>
+          </h2>
+        </div>
       </div>
       <section className="teacher-registration-wrapper">
         <div className="container">
