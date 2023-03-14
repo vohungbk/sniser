@@ -1,6 +1,4 @@
 .banner-whitepaper {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../../../assets/whitepaper-bg.png"), no-repeat, center center/ cover !important;
   background-size: cover !important;
   height: 400px;
   padding: 175px 100px;
@@ -61,9 +59,9 @@
 
 @media only screen and (max-width: 679px) {
   .banner-whitepaper {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("../../../assets/whitepaper-bg.png") no-repeat center center fixed !important;
-    background-size: cover !important;
+    .blur {
+      padding: 120px 20px;
+    }
   }
   .white-content {
     padding: 0;

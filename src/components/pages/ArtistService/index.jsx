@@ -102,7 +102,7 @@ const ArtistService = () => {
                 </p>
 
                 <a onClick={() => setShowSignUp(true)} className="signin-btn">
-                  Sign up with Register to start uploading your content.
+                  Sign up with Sniser to start uploading your content.
                 </a>
               </div>
             </div>

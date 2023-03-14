@@ -8,19 +8,26 @@ import Revenue1 from "../../../assets/revenue1.png"
 import Revenue2 from "../../../assets/revenue2.png"
 import Revenue3 from "../../../assets/revenue3.png"
 
+import WhitepaperBg from "../../../assets/whitepaper-bg.webp"
+
 const Whitepaper = () => {
   const [showHowTokenWork, setShowHowTokenWork] = useState(false)
   const [showRevenue, setShowRevenue] = useState(false)
 
   return (
     <>
-      <div className="page-banner-area banner-whitepaper">
-        <h2>
-          <span>
-            <span style={{ color: "#6FDA44" }}>Sniser&nbsp;</span>White Paper – Our
-            raison d'être
-          </span>
-        </h2>
+      <div
+        className="page-banner-area banner-whitepaper"
+        style={{ backgroundImage: `url(${WhitepaperBg})` }}
+      >
+        <div className="blur">
+          <h2>
+            <span>
+              <span style={{ color: "#6FDA44" }}>Sniser&nbsp;</span>White Paper – Our
+              raison d'être
+            </span>
+          </h2>
+        </div>
       </div>
       <div className="benefits">
         <button

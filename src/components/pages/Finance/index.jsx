@@ -8,23 +8,30 @@ import number3 from "../../../assets/numbers-3.png"
 import Layer from "../../../assets/layer.png"
 import SubmissionForm from "../../Forms/SubmissionForm"
 
+import FinanceBg from "../../../assets/finance-bg.jpeg"
+
 const Finance = () => {
   return (
     <>
-      <div className="page-banner-area banner-finance">
-        <h2>
-          <span>
-            Submit <span style={{ color: "#6FDA44" }}>Your ArtWork</span>!
-          </span>
-          <br />
-          <p className="text-center">
-            Where possible we work with various artists to provide financial and
-            non-financial
-            <br /> support towards their artwork. If you would like to be considered
-            for assistance, <br />
-            please see below regarding how we work.
-          </p>
-        </h2>
+      <div
+        className="page-banner-area banner-finance"
+        style={{ backgroundImage: ` url(${FinanceBg})` }}
+      >
+        <div className="blur">
+          <h2>
+            <span>
+              Submit <span style={{ color: "#6FDA44" }}>Your ArtWork</span>!
+            </span>
+            <br />
+            <p className="text-center">
+              Where possible we work with various artists to provide financial and
+              non-financial
+              <br /> support towards their artwork. If you would like to be
+              considered for assistance, <br />
+              please see below regarding how we work.
+            </p>
+          </h2>
+        </div>
       </div>
       <section className="how-it-work">
         <h2>How it work</h2>

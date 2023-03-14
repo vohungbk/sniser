@@ -26,7 +26,7 @@ const Faq = () => {
       >
         <h2>
           <i className="fa fa-quote-left lfts pr-3"></i>
-          <span>Are nfts like crypto currencies?</span> What are the returns of
+          <span>Are nfts like crypto currencies?</span> What are <span>the returns of&nbsp;</span>
           investing in them? <br />
           Are they a scam?<i className="fa fa-quote-right lfts pl-3"></i>
         </h2>
