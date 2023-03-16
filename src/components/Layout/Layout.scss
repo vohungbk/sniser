@@ -371,6 +371,18 @@ a {
   text-transform: uppercase;
 }
 
+.header-btn .image-box {
+  margin-bottom: 25px;
+  a {
+    background: #000;
+    padding: 6px 10px;
+    border-radius: 10px;
+    color: #fff !important;
+    display: flex !important;
+    align-items: center;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     max-width: 1300px;
@@ -435,6 +447,12 @@ a {
   }
   .mean-container .mean-nav ul li a {
     display: block !important;
+  }
+
+  .mean-container .mean-nav ul li a {
+    &.menu-toggle {
+      display: flex !important;
+    }
   }
   .mean-container .mean-bar {
     background-color: #ffffff;

@@ -2,8 +2,30 @@ import { Modal } from "react-bootstrap"
 import Slider from "react-slick"
 import "./styles.scss"
 import LoginImage from "../../../assets/login-img1.png"
+import { useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
+import { useModal } from "../../../modal-context"
+import axios from "axios"
+import { toast } from "react-toastify"
+import { useState } from "react"
 
-const SignUpModal = ({ open, close, openModalLogin }) => {
+const schema = yup.object().shape({
+  f_name: yup.string().required(),
+  l_name: yup.string().required(),
+  business_name: yup.string().required(),
+  address: yup.string().required(),
+  phone: yup.string().min(10).max(10).required(),
+  email: yup.string().email().required(),
+  password: yup.string().min(8).max(32).required(),
+  cnfrmpassword: yup
+    .string()
+    .oneOf([yup.ref("password"), null], "Passwords must match"),
+})
+
+const SignUpModal = ({ open, close }) => {
+  const { setModalLogin, setModalSignUp } = useModal()
+  const [isLoading, setIsLoading] = useState(false)
   const settings = {
     dots: true,
     infinite: true,
@@ -13,21 +35,61 @@ const SignUpModal = ({ open, close, openModalLogin }) => {
     autoplay: true,
     arrows: false,
   }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: yupResolver(schema),
+  })
+
+  const onSubmitHandler = (data) => {
+    setIsLoading(true)
+    const formdata = new FormData()
+    formdata.append("f_name", data.f_name)
+    formdata.append("l_name", data.l_name)
+    formdata.append("email", data.email)
+    formdata.append("phone", data?.phone)
+    formdata.append("address", data?.address)
+    formdata.append("password", data?.password)
+    formdata.append("business_name", data?.business_name)
+    formdata.append("secure_token", "BLK-lGin834iN")
+
+    axios({
+      method: "post",
+      url: `https://sniser.com/API/signup.php`,
+      data: formdata,
+      headers: { "Content-Type": "multipart/form-data" },
+    }).then(function (response) {
+      setIsLoading(false)
+      if (response.data.error) {
+        toast.error(response.data.error || "Error")
+        return
+      }
+      toast.success("Registration Successfully !!")
+      setModalSignUp(false)
+      setModalLogin(true)
+    })
+
+    // reset()
+  }
+
   return (
     <Modal show={open} onHide={close} centered>
       <button
         type="button"
-        class="close"
+        className="close"
         data-dismiss="modal"
         aria-label="Close"
         onClick={close}
       >
         <span aria-hidden="true">
-          <span class="back">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          <span className="back">
+            <i className="fa fa-chevron-left" aria-hidden="true"></i>
             &nbsp;Back
           </span>
-          <span class="x">x</span>
+          <span className="x">x</span>
         </span>
       </button>
       <Modal.Body>
@@ -62,144 +124,145 @@ const SignUpModal = ({ open, close, openModalLogin }) => {
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-12">
-            <div class="modal-right-col">
-              <div class="sniser-logo">
+          <div className="col-lg-6 col-12">
+            <div className="modal-right-col">
+              <div className="sniser-logo">
                 <img src="https://sniser.com/images/sniser-logo.png" alt="" />
               </div>
-
               <h2 className="title">Welcome Back!</h2>
-
-              <p>Connect with your audience throuw NFTs!</p>
-
+              <p>Connect with your audience throw NFTs!</p>
               <form
-                action=""
-                method="post"
-                id="signupfrm"
-                class="login-form signup-form"
+                className="login-form signup-form"
+                onSubmit={handleSubmit(onSubmitHandler)}
               >
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <input
                         type="text"
                         name="f_name"
                         id="f_name"
-                        value=""
-                        class="form-control"
+                        {...register("f_name", { required: true })}
+                        className={`form-control ${errors?.f_name && "invalid"}`}
                         placeholder="First Name*"
                       />
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <input
                         type="text"
                         name="l_name"
                         id="l_name"
-                        value=""
-                        class="form-control"
+                        {...register("l_name")}
+                        className={`form-control ${errors?.l_name && "invalid"}`}
                         placeholder="Last Name*"
                       />
                     </div>
                   </div>
 
-                  <div class="col-sm-12">
-                    <div class="form-group">
+                  <div className="col-sm-12">
+                    <div className="form-group">
                       <input
                         type="text"
-                        name="bussiness_name"
-                        id="bussiness_name"
-                        value=""
-                        class="form-control"
+                        name="business_name"
+                        id="business_name"
+                        {...register("business_name")}
+                        className={`form-control ${
+                          errors?.business_name && "invalid"
+                        }`}
                         placeholder="Business Name*"
                       />
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <input
                         type="email"
                         name="email"
                         id="email"
-                        value=""
-                        class="form-control"
+                        {...register("email")}
+                        className={`form-control ${errors?.email && "invalid"}`}
                         placeholder="Email*"
                       />
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <input
                         type="number"
                         name="phone"
                         id="phone"
-                        value=""
-                        class="form-control"
+                        {...register("phone")}
+                        className={`form-control ${errors?.phone && "invalid"}`}
                         placeholder="Phone*"
                       />
                     </div>
                   </div>
 
-                  <div class="col-sm-12 ">
-                    <div class="form-group">
+                  <div className="col-sm-12 ">
+                    <div className="form-group">
                       <input
                         type="text"
-                        class="form-control"
                         name="address"
                         id="address"
-                        value=""
                         placeholder="Address*"
+                        {...register("address")}
+                        className={`form-control ${errors?.address && "invalid"}`}
                       />
                     </div>
                   </div>
 
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <input
                         type="password"
                         name="password"
                         id="password"
-                        class="form-control"
                         placeholder="Password*"
+                        {...register("password")}
+                        className={`form-control ${errors?.password && "invalid"}`}
                       />
                     </div>
                   </div>
 
                   <input type="hidden" name="user_type" value="free" />
 
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <div className="col-md-6">
+                    <div className="form-group">
                       <input
                         type="password"
-                        class="form-control"
                         name="cnfrmpassword"
                         id="cnfrmpassword"
                         placeholder="Confirm Password*"
+                        {...register("cnfrmpassword")}
+                        className={`form-control ${
+                          errors?.cnfrmpassword && "invalid"
+                        }`}
                       />
                     </div>
                   </div>
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     type="submit"
                     name="submit"
-                    class=" login-btn"
+                    className="login-btn"
                     value="Join us"
+                    disabled={isLoading}
                   />
                 </div>
-
-                <div class="form-group">
+                <div className="form-group">
                   <p>
                     Already have an account? <br />
                     <button
                       className="btnShowsSignUp"
                       onClick={() => {
-                        openModalLogin()
+                        setModalLogin(true)
                         close()
                       }}
                     >

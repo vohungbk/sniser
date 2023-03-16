@@ -5,12 +5,15 @@ import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import { BrowserRouter } from "react-router-dom"
 import ScrollToTop from "./components/ScrollToTop"
+import { ModalProvider } from "./modal-context"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <BrowserRouter>
-    <ScrollToTop />
-    <App />
+    <ModalProvider>
+      <ScrollToTop />
+      <App />
+    </ModalProvider>
   </BrowserRouter>
 )
 

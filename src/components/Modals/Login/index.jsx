@@ -2,10 +2,22 @@ import { Modal } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import Slider from "react-slick"
 import LoginImage from "../../../assets/login-img1.png"
+import { useModal } from "../../../modal-context"
+import { useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+import * as yup from "yup"
+import ReCAPTCHA from "react-google-recaptcha"
+import { toast } from "react-toastify"
 
 import "./styles.scss"
+import axios from "axios"
 
-const LoginModal = ({ open, close, openModalSignUp }) => {
+const schema = yup.object().shape({
+  email: yup.string().email().required(),
+  password: yup.string().min(8).max(32).required(),
+})
+
+const LoginModal = ({ open, close }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -15,21 +27,50 @@ const LoginModal = ({ open, close, openModalSignUp }) => {
     autoplay: true,
     arrows: false,
   }
+  const { setModalSignUp, setModalLogin, setUserInfo } = useModal()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  })
+
+  const onSubmitHandler = (data) => {
+    const formdata = new FormData()
+    formdata.append("secure_token", "BLK-lGin834iN")
+    formdata.append("email_address", data.email)
+    formdata.append("password", data.password)
+    axios({
+      method: "post",
+      url: `https://sniser.com/API/login.php`,
+      data: formdata,
+      headers: { "Content-Type": "multipart/form-data" },
+    }).then(function (response) {
+      if (response.data.error) {
+        toast.error(response.data.error || "Error")
+        return
+      }
+      setUserInfo(response.data.data)
+      setModalLogin(false)
+    })
+  }
+
   return (
     <Modal show={open} onHide={close}>
       <button
         type="button"
-        class="close"
+        className="close"
         data-dismiss="modal"
         aria-label="Close"
         onClick={close}
       >
         <span aria-hidden="true">
-          <span class="back">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          <span className="back">
+            <i className="fa fa-chevron-left" aria-hidden="true"></i>
             &nbsp;Back
           </span>
-          <span class="x">x</span>
+          <span className="x">x</span>
         </span>
       </button>
       <Modal.Body>
@@ -73,14 +114,14 @@ const LoginModal = ({ open, close, openModalSignUp }) => {
               <h2>Welcome Back!</h2>
               <p>Connect with your audience through NFTs!</p>
 
-              <form action="" method="post" className="login-form">
+              <form onSubmit={handleSubmit(onSubmitHandler)} className="login-form">
                 <div className="form-group">
                   <input
                     type="email"
                     name="email"
-                    className="form-control"
+                    className={`form-control ${errors?.email && "invalid"}`}
                     placeholder="Email"
-                    required=""
+                    {...register("email")}
                   />
                 </div>
 
@@ -88,49 +129,22 @@ const LoginModal = ({ open, close, openModalSignUp }) => {
                   <input
                     type="password"
                     name="password"
-                    className="form-control"
+                    className={`form-control ${errors?.password && "invalid"}`}
                     placeholder="Password"
-                    required=""
+                    {...register("password")}
                   />
                 </div>
 
                 <div className="form-group">
-                  <div
-                    className="g-recaptcha"
-                    data-sitekey="6LcL4qcgAAAAANKTMZTAkjCqJdnGR8YPu27U69gW"
-                    data-callback="capcha_filled"
-                    data-expired-callback="capcha_expired"
-                  >
+                  <div className="g-recaptcha">
                     <div style={{ width: "304px", height: "78px" }}>
                       <div>
-                        <iframe
-                          title="reCAPTCHA"
-                          src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LcL4qcgAAAAANKTMZTAkjCqJdnGR8YPu27U69gW&amp;co=aHR0cHM6Ly9zbmlzZXIuY29tOjQ0Mw..&amp;hl=en&amp;v=8G7OPK94bhCRbT0VqyEVpQNj&amp;size=normal&amp;cb=wxkm5wp3373s"
-                          width="304"
-                          height="78"
-                          role="presentation"
-                          name="a-ds6gemuppobn"
-                          frameborder="0"
-                          scrolling="no"
-                          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"
-                        ></iframe>
+                        <ReCAPTCHA
+                          sitekey={"6LdfLysUAAAAAIVunEmrVZGErd_74d1r7deXdksg"}
+                          // onChange={handleChange}
+                        />
                       </div>
-                      <textarea
-                        id="g-recaptcha-response-1"
-                        name="g-recaptcha-response"
-                        className="g-recaptcha-response"
-                        style={{
-                          width: "250px",
-                          height: "40px",
-                          border: "1px solid rgb(193, 193, 193)",
-                          margin: "10px 25px",
-                          padding: "0px",
-                          resize: "none",
-                          display: "none",
-                        }}
-                      ></textarea>
                     </div>
-                    <iframe style={{ display: "none" }}></iframe>
                   </div>
                 </div>
 
@@ -157,7 +171,7 @@ const LoginModal = ({ open, close, openModalSignUp }) => {
                     <button
                       className="btnShowsSignUp"
                       onClick={() => {
-                        openModalSignUp()
+                        setModalSignUp(true)
                         close()
                       }}
                     >

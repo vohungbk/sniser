@@ -88,9 +88,11 @@ const Home = () => {
               >
                 <img className="steps-number-image" src={number1} alt="" />
                 <p className="steps-text">
-                  Upload your content on to our server. This can be anything from a
-                  <strong>book</strong>, <strong>song</strong>, or
-                  <strong>film</strong>.
+                  Upload your content on to our server. This can be anything from
+                  a&nbsp;
+                  <strong style={{ fontWeight: 700 }}>book</strong>, &nbsp;
+                  <strong style={{ fontWeight: 700 }}>song</strong>, or&nbsp;
+                  <strong style={{ fontWeight: 700 }}>film</strong>.
                 </p>
               </div>
               <div
@@ -258,11 +260,11 @@ const Home = () => {
                 background: "#2a353b",
                 color: "#fff",
               }}
-              class="table-monetise table-mob"
+              className="table-monetise table-mob"
             >
               <thead>
                 <tr>
-                  <th colspan="2">Streaming</th>
+                  <th colSpan="2">Streaming</th>
                 </tr>
               </thead>
 
@@ -291,11 +293,11 @@ const Home = () => {
                 background: "#2a353b",
                 color: "#fff",
               }}
-              class="table-monetise table-mob"
+              className="table-monetise table-mob"
             >
               <thead>
                 <tr>
-                  <th colspan="2">Revenues</th>
+                  <th colSpan="2">Revenues</th>
                 </tr>
               </thead>
 
@@ -323,11 +325,11 @@ const Home = () => {
                 background: "#2a353b",
                 color: "#fff",
               }}
-              class="table-monetise table-mob"
+              className="table-monetise table-mob"
             >
               <thead>
                 <tr>
-                  <th colspan="2">Illegal downloads or copying</th>
+                  <th colSpan="2">Illegal downloads or copying</th>
                 </tr>
               </thead>
 
@@ -355,11 +357,11 @@ const Home = () => {
                 background: "#2a353b",
                 color: "#fff",
               }}
-              class="table-monetise table-mob"
+              className="table-monetise table-mob"
             >
               <thead>
                 <tr>
-                  <th colspan="2">Royalties</th>
+                  <th colSpan="2">Royalties</th>
                 </tr>
               </thead>
 
@@ -385,11 +387,11 @@ const Home = () => {
                 background: "#2a353b",
                 color: "#fff",
               }}
-              class="table-monetise table-mob"
+              className="table-monetise table-mob"
             >
               <thead>
                 <tr>
-                  <th colspan="2">Customers</th>
+                  <th colSpan="2">Customers</th>
                 </tr>
               </thead>
 

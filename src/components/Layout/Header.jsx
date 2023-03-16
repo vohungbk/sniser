@@ -2,14 +2,13 @@ import { useEffect, useState } from "react"
 import "./Layout.scss"
 import NavDescription from "./NavDescription"
 import LogoMobile from "../../assets/logo.png"
-import LoginModal from "../Modals/Login"
-import SignUpModal from "../Modals/Signup"
+
+import { useModal } from "../../modal-context"
 
 const Header = () => {
   const [fixed, setFixed] = useState(false)
   const [openMenu, setOpenMenu] = useState(false)
-  const [showModalLogin, setShowModalLogin] = useState(false)
-  const [showModalSignUp, setShowSignUp] = useState(false)
+  const { setModalLogin, userInfo } = useModal()
 
   useEffect(() => {
     const onScroll = async (event) => {
@@ -26,6 +25,8 @@ const Header = () => {
       document.removeEventListener("scroll", onScroll)
     }
   }, [])
+
+  console.log(userInfo)
 
   return (
     <header className={`navbar-area ${fixed && "is-sticky"}`}>
@@ -46,32 +47,30 @@ const Header = () => {
                   </a>
                 </li>
 
-                {/* <li className="nav-item">
-                  <a href="https://sniser.com/faq/" className="nav-link ">
-                    FAQ
-                  </a>
-                </li>
+                {userInfo ? (
+                  <div class="header-btn login-btn">
+                    <div class="image-box d-block">
+                      <a class="menu-toggle">
+                        <img
+                          src="https://sniser.com/images/account.png"
+                          alt=""
+                          style={{ width: "20px" }}
+                        />
+                        <span>{userInfo?.business_name}</span>
+                      </a>
+                    </div>
+                  </div>
+                ) : (
+                  <li className="header-btn login-btn">
+                    <button
+                      className="nav-link h-btn"
+                      onClick={() => setModalLogin(true)}
+                    >
+                      Upload Content
+                    </button>
+                  </li>
+                )}
 
-                <li className="nav-item">
-                  <a href="https://sniser.com/about-us/" className="nav-link ">
-                    About Us
-                  </a>
-                </li>
-
-                <li className="nav-item">
-                  <a href="https://sniser.com/contact-us/" className="nav-link ">
-                    Contact Us
-                  </a>
-                </li> */}
-
-                <li className="header-btn login-btn">
-                  <button
-                    className="nav-link h-btn"
-                    onClick={() => setShowModalLogin(true)}
-                  >
-                    Upload Content
-                  </button>
-                </li>
                 <li className="header-btn login-btn">
                   <button className="nav-link h-btn connect-btn">
                     Purchase NFT
@@ -129,12 +128,25 @@ const Header = () => {
                   </li>
 
                   <li className="header-btn login-btn header-btn-mobile">
-                    <button
-                      className="nav-link h-btn h-btn-mobile"
-                      onClick={() => setShowModalLogin(true)}
-                    >
-                      Upload Content
-                    </button>
+                    {userInfo ? (
+                      <div class="image-box d-block">
+                        <a class="menu-toggle">
+                          <img
+                            src="https://sniser.com/images/account.png"
+                            alt=""
+                            style={{ width: "20px" }}
+                          />
+                          <span>{userInfo?.business_name}</span>
+                        </a>
+                      </div>
+                    ) : (
+                      <button
+                        className="nav-link h-btn h-btn-mobile"
+                        onClick={() => setModalLogin(true)}
+                      >
+                        Upload Content
+                      </button>
+                    )}
                   </li>
                   <li className="header-btn login-btn header-btn-mobile">
                     <button className="nav-link h-btn h-btn-mobile">
@@ -158,20 +170,6 @@ const Header = () => {
         </div>
       </div>
       <NavDescription />
-      {!!showModalLogin && (
-        <LoginModal
-          open={showModalLogin}
-          close={() => setShowModalLogin(!showModalLogin)}
-          openModalSignUp={() => setShowSignUp(true)}
-        />
-      )}
-      {!!showModalSignUp && (
-        <SignUpModal
-          open={showModalSignUp}
-          close={() => setShowSignUp(!showModalSignUp)}
-          openModalLogin={() => setShowModalLogin(true)}
-        />
-      )}
     </header>
   )
 }

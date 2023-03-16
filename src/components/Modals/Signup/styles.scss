@@ -17,4 +17,10 @@
   font-size: 14px;
   padding: 10px 20px;
   width: 100%;
+  &.invalid {
+    border-color: red;
+    &:focus {
+      border-color: red !important;
+    }
+  }
 }

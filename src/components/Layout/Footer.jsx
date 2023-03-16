@@ -63,7 +63,7 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-              <div className="app-boxs">
+              {/* <div className="app-boxs">
                 <a href="#">
                   <img
                     src="https://sniser.com/https://sniser.com/images/aap1.png"
@@ -76,7 +76,7 @@ const Footer = () => {
                     alt=""
                   />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
 
